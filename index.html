@@ -7,7 +7,79 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
+    <!-- Main Menu Screen -->
+    <div class="menu-screen" id="menu-screen">
+        <div class="menu-content">
+            <h1 class="game-title menu-title">NeoSolitaire</h1>
+            <p class="menu-subtitle">Part of the NEO game series</p>
+            
+            <div class="menu-buttons">
+                <button id="start-game" class="menu-button">New Game</button>
+                <button id="how-to-play" class="menu-button">How to Play</button>
+                <button id="options" class="menu-button">Options</button>
+            </div>
+            
+            <div class="menu-decoration">
+                <div class="menu-card menu-card-1">♠</div>
+                <div class="menu-card menu-card-2">♥</div>
+                <div class="menu-card menu-card-3">♣</div>
+                <div class="menu-card menu-card-4">♦</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- How to Play Modal -->
+    <div class="modal" id="howto-modal">
+        <div class="modal-content how-to-content">
+            <h2>How to Play</h2>
+            <div class="instructions">
+                <h3>Goal</h3>
+                <p>Move all cards to the foundation piles (top right) by suit, starting with Aces and building up to Kings.</p>
+                
+                <h3>Movement Rules</h3>
+                <ul>
+                    <li>In the tableau (seven columns), build descending sequences with alternating colors.</li>
+                    <li>Only Kings can be placed on empty tableau spots.</li>
+                    <li>In foundations, build ascending sequences of the same suit, starting with Aces.</li>
+                </ul>
+                
+                <h3>Controls</h3>
+                <ul>
+                    <li>Click the stock pile (top left) to draw cards.</li>
+                    <li>Drag cards to move them or click to select and then click a destination.</li>
+                    <li>Use the hint button if you get stuck.</li>
+                </ul>
+            </div>
+            <button id="close-howto">Got it!</button>
+        </div>
+    </div>
+    
+    <!-- Options Modal -->
+    <div class="modal" id="options-modal">
+        <div class="modal-content options-content">
+            <h2>Options</h2>
+            <div class="option-group">
+                <h3>Card Design</h3>
+                <div class="color-options">
+                    <button class="color-option blue-theme" data-theme="blue">Blue</button>
+                    <button class="color-option green-theme" data-theme="green">Green</button>
+                    <button class="color-option purple-theme" data-theme="purple">Purple</button>
+                    <button class="color-option dark-theme" data-theme="dark">Dark</button>
+                </div>
+            </div>
+            <div class="option-group">
+                <h3>Card Animation Speed</h3>
+                <div class="animation-speed">
+                    <input type="range" id="animation-speed" min="0.5" max="2" step="0.1" value="1">
+                    <span id="speed-value">Normal</span>
+                </div>
+            </div>
+            <button id="save-options">Save & Close</button>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div class="container" id="game-container" style="display: none;">
         <div class="game-header">
             <h1 class="game-title">NeoSolitaire</h1>
             <div class="stats">
@@ -28,6 +100,7 @@
                 <button id="new-game">New Game</button>
                 <button id="undo">Undo</button>
                 <button id="hint">Hint</button>
+                <button id="menu">Menu</button>
             </div>
         </div>
 
@@ -77,14 +150,19 @@
 
     <div class="modal" id="win-modal">
         <div class="modal-content">
+            <div class="confetti-container" id="confetti-container"></div>
             <h2>Congratulations!</h2>
             <p>You've won the game!</p>
             <p>Time: <span id="final-time">00:00</span></p>
             <p>Moves: <span id="final-moves">0</span></p>
             <p>Score: <span id="final-score">0</span></p>
-            <button id="play-again">Play Again</button>
+            <div class="win-buttons">
+                <button id="play-again">Play Again</button>
+                <button id="back-to-menu">Back to Menu</button>
+            </div>
         </div>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
