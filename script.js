@@ -77,32 +77,22 @@ function hideMenu() {
 }
 
 function showHowToPlay() {
-    howToModal.style.display = 'flex';
+    document.getElementById('howto-modal').style.display = 'flex';
 }
 
 function hideHowToPlay() {
-    howToModal.style.display = 'none';
+    document.getElementById('howto-modal').style.display = 'none';
 }
 
 function showOptions() {
-    optionsModal.style.display = 'flex';
-    
-    // Set current theme as active
-    colorOptions.forEach(option => {
-        option.classList.remove('active');
-        if (option.dataset.theme === currentTheme) {
-            option.classList.add('active');
-        }
-    });
-    
-    // Set current animation speed
-    animationSpeedSlider.value = animationSpeed;
-    updateSpeedValue();
+    document.getElementById('options-modal').style.display = 'flex';
 }
 
+
 function hideOptions() {
-    optionsModal.style.display = 'none';
+    document.getElementById('options-modal').style.display = 'none';
 }
+
 
 function updateSpeedValue() {
     const speed = parseFloat(animationSpeedSlider.value);
@@ -779,11 +769,22 @@ startGameBtn.addEventListener('click', () => {
     initGame();
 });
 
-howToPlayBtn.addEventListener('click', showHowToPlay);
-closeHowToBtn.addEventListener('click', hideHowToPlay);
+document.getElementById('how-to-play').onclick = function() {
+    document.getElementById('howto-modal').style.display = 'flex';
+};
 
-optionsBtn.addEventListener('click', showOptions);
-saveOptionsBtn.addEventListener('click', saveOptions);
+document.getElementById('close-howto').onclick = function() {
+    document.getElementById('howto-modal').style.display = 'none';
+};
+
+document.getElementById('options').onclick = function() {
+    document.getElementById('options-modal').style.display = 'flex';
+};
+
+document.getElementById('save-options').onclick = function() {
+    saveOptions();
+    document.getElementById('options-modal').style.display = 'none';
+};
 
 // Event listeners for theme selection
 colorOptions.forEach(option => {

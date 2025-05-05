@@ -14,6 +14,10 @@
     --animation-multiplier: 1;
 }
 
+.modal {
+    z-index: 3500 !important; /* Higher than menu z-index */
+}
+
 /* Theme variations */
 .green-theme {
     --primary-color: #1e4a3d;
