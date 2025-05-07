@@ -4,8 +4,12 @@ A modern twist on the classic Solitaire card game, featuring sleek animations, m
 
 Try it here: https://neo-solitaire.vercel.app/
 
-![Game Screenshot](https://github.com/user-attachments/assets/...)
-![Win Screen](https://github.com/user-attachments/assets/...)
+![image](https://github.com/user-attachments/assets/7ec88c81-2867-481d-8d12-6b6ce39adc82)
+
+![image](https://github.com/user-attachments/assets/3f792893-2b50-4b74-a697-4700dffef6f8)
+
+![image](https://github.com/user-attachments/assets/480335bf-049a-497e-91ca-bc2c42aae3dd)
+
 
 ## Features
 
