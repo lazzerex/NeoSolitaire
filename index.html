@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeoSolitaire</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
-    <link rel="icon" type="image/png" href="favicon.png">
 </head>
 <body>
     <!-- Main Menu Screen -->
@@ -17,10 +15,8 @@
             
             <div class="menu-buttons">
                 <button id="start-game" class="menu-button">New Game</button>
-                <button id="continue-game" class="menu-button">Continue Game</button>
                 <button id="how-to-play" class="menu-button">How to Play</button>
                 <button id="options" class="menu-button">Options</button>
-                <button id="statistics" class="menu-button">Statistics</button>
             </div>
             
             <div class="menu-decoration">
@@ -29,10 +25,6 @@
                 <div class="menu-card menu-card-3">♣</div>
                 <div class="menu-card menu-card-4">♦</div>
             </div>
-        </div>
-        
-        <div class="footer">
-            <p>Version 2.0 | Made with ♠♥♣♦</p>
         </div>
     </div>
     
@@ -56,14 +48,6 @@
                     <li>Click the stock pile (top left) to draw cards.</li>
                     <li>Drag cards to move them or click to select and then click a destination.</li>
                     <li>Use the hint button if you get stuck.</li>
-                    <li>Use undo to take back your last move.</li>
-                </ul>
-                
-                <h3>Scoring</h3>
-                <ul>
-                    <li>+10 points for each card moved to a foundation</li>
-                    <li>+5 points for revealing a face-down card</li>
-                    <li>+5 points for each move to the tableau</li>
                 </ul>
             </div>
             <button id="close-howto">Got it!</button>
@@ -90,46 +74,7 @@
                     <span id="speed-value">Normal</span>
                 </div>
             </div>
-            <!-- Auto-complete and Draw-3 options will be added here by JavaScript -->
             <button id="save-options">Save & Close</button>
-        </div>
-    </div>
-    
-    <!-- Statistics Modal -->
-    <div class="modal" id="stats-modal">
-        <div class="modal-content stats-content">
-            <h2>Game Statistics</h2>
-            <div class="stats-panel">
-                <div class="stat-card">
-                    <h3>Games Played</h3>
-                    <p id="stats-games-played">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Games Won</h3>
-                    <p id="stats-games-won">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Win Rate</h3>
-                    <p id="stats-win-rate">0%</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Best Time</h3>
-                    <p id="stats-best-time">--:--</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Best Score</h3>
-                    <p id="stats-best-score">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Current Streak</h3>
-                    <p id="stats-current-streak">0</p>
-                </div>
-                <div class="stat-card">
-                    <h3>Best Streak</h3>
-                    <p id="stats-best-streak">0</p>
-                </div>
-            </div>
-            <button id="close-stats">Close</button>
         </div>
     </div>
 
@@ -155,7 +100,6 @@
                 <button id="new-game">New Game</button>
                 <button id="undo">Undo</button>
                 <button id="hint">Hint</button>
-                <button id="auto-complete">Auto Complete</button>
                 <button id="menu">Menu</button>
             </div>
         </div>
@@ -203,11 +147,7 @@
             </div>
         </div>
     </div>
-    
-    <!-- Click Shield to Prevent Accidental Double-clicks -->
-    <div class="click-shield" id="click-shield"></div>
 
-    <!-- Win Modal -->
     <div class="modal" id="win-modal">
         <div class="modal-content">
             <div class="confetti-container" id="confetti-container"></div>
@@ -219,11 +159,11 @@
             <div class="win-buttons">
                 <button id="play-again">Play Again</button>
                 <button id="back-to-menu">Back to Menu</button>
-                <button id="share-result">Share Result</button>
             </div>
         </div>
     </div>
     
     <script src="script.js"></script>
+    
 </body>
 </html>
